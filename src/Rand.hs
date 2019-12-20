@@ -1,8 +1,10 @@
 module Rand (genNpuzzle) where
 
 import System.Random
+import System.Random.Shuffle
 
 genNpuzzle :: Int -> IO [Int]
 genNpuzzle n = do
             gen <- getStdGen
-            return $ take (n * n) (randomRs (1, (n * n)) gen)
+            return $ shuffle' [0 .. len - 1] len gen
+            where len = n * n
