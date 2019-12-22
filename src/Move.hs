@@ -1,4 +1,4 @@
-module Move where
+module Move (move4Ways) where
 
 zeroIndex :: [Int] -> Int
 zeroIndex list = head [i | (x,i) <- zip list [0..], x == 0]
