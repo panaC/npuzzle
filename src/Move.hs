@@ -4,7 +4,9 @@ zeroIndex :: [Int] -> Int
 zeroIndex list = head [i | (x,i) <- zip list [0..], x == 0]
 
 swapIndex :: Int -> [Int] -> [(Int, Int)]
-swapIndex zeroIdx list = zip (filter (\x -> x >= 0 && x < (length list)) $ map (+zeroIdx) [-3, 1, 3, -1]) (repeat zeroIdx)
+swapIndex zeroIdx list = zip (
+  filter (\x -> x >= 0 && x < (length list)) $
+    map (+zeroIdx) [-3, 1, 3, -1]) (repeat zeroIdx)
 
 swap :: Int -> Int -> [Int] -> [Int]
 swap moveIdx zeroIdx list =
