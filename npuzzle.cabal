@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable npuzzle
   main-is:             Main.hs
-  other-modules:       Goal, Rand, Heurestic
+  other-modules:       Goal, Rand, Heurestic, Astar, Parser
   -- other-extensions:    
   build-depends:       base >=4.9 && <4.10,
                         random >=1.1 && <1.2,
