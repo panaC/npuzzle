@@ -1,4 +1,4 @@
-module Astar where
+module Astar (astar) where
 
 import qualified Data.PQueue.Prio.Min as PQ
 import qualified Data.HashMap.Strict as Map
